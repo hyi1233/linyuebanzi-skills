@@ -39,6 +39,8 @@ Manifest JSON 格式:
     批量: {id}.png / {id}.txt / {id}.json + _run_metadata.json
 """
 
+from __future__ import annotations
+
 import argparse
 import json
 import os
@@ -47,6 +49,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
+from typing import Optional
 
 import urllib.request
 import urllib.error
